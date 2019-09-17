@@ -1,0 +1,40 @@
+{
+  "wishlist": [
+    {
+      "id": "bidrag",
+      "title": "Kuvert- eller resebidrag",
+      "description": "<p>Vill du ge ett bidrag till vår bröllopsresa eller tycker det är svårt att komma på en present? Då kan du skicka ett bidrag via swish eller kontant.</p><p><b>Det är helt valfritt att ge ett bidrag.</b></p>",
+      "selected": false
+    },
+    {
+      "id": "excalibur",
+      "title": "Torkugn excalibur",
+      "description": "<p>Om ni är några stycken som vill gå ihop för en gåva, se <a target=\"_blank\" href=\"https://www.cervera.se/produkt/mattork-9-br-26h-timer-excalibur\"><b>länk</b></a>.</p>",
+      "selected": false
+    },
+    {
+      "id": "angkok",
+      "title": "Ångkoksinsats",
+      "description": "<p>Av mindre modell.</p>",
+      "selected": false
+    },
+    {
+      "id": "mattsats",
+      "title": "Måttsats i enhet cups i metallutförande",
+      "description": "<p>Förslagsvis bestående av 1 cup, 1/2 cup, 1/3 cup och 1/4 cup.</p>",
+      "selected": false
+    },
+    {
+      "id": "paslakan",
+      "title": "Påslakanset i ren lin för dubbelsäng",
+      "description": "<p>Förslag på färg: natur/beige/ljusgrå</p>",
+      "selected": false
+    },
+    {
+      "id": "tradgarsdhandel",
+      "title": "Presentkort på trädgårdshandel",
+      "description": "",
+      "selected": false
+    }
+  ]
+}
