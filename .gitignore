@@ -1,0 +1,8 @@
+# builds
+/build
+/old-builds
+
+# dependencies
+/node_modules
+
+
