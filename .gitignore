@@ -1,6 +1,7 @@
 # builds
 /build
 /old-builds
+/static
 
 # dependencies
 /node_modules
