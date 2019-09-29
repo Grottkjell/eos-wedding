@@ -1,3 +1,6 @@
+import Vue from "vue/dist/vue";
+import axios from "axios";
+
 var app = new Vue({
     el: '#app',
     data: {
@@ -57,14 +60,14 @@ var app = new Vue({
             }
         },
         getWishlist() {
-            axios
-                .get("/api/wishlist", {})
-                .then(function (response) {
-                    this.wishlist = response.data.wishlist;
-                }.bind(this))
-                .catch(function () { })
-                .then(function () {
-                });
+            // axios
+            //     .get("/api/wishlist", {})
+            //     .then(function (response) {
+            //         this.wishlist = response.data.wishlist;
+            //     }.bind(this))
+            //     .catch(function () { })
+            //     .then(function () {
+            //     });
         },
     }
 

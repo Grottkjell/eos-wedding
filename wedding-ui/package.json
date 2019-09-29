@@ -4,7 +4,17 @@
   "description": "A beautiful information page about the wedding of Emrik and Sanna!",
   "main": "wedding.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm-watch",
+    "build": "webpack && node build-static.js"
+  },
+  "watch": {
+    "build": {
+      "patterns": [
+        "src"
+      ],
+      "extensions": "js,html,css"
+    }
   },
   "keywords": [
     "javascript",
@@ -28,6 +38,12 @@
   "devDependencies": {
     "@babel/cli": "^7.6.0",
     "@babel/core": "^7.6.0",
-    "@babel/preset-env": "^7.6.0"
-  }
+    "@babel/preset-env": "^7.6.0",
+    "babel-loader": "^8.0.6",
+    "glob": "^7.1.4",
+    "npm-watch": "^0.6.0",
+    "webpack": "^4.41.0",
+    "webpack-cli": "^3.3.9"
+  },
+  "browserslist": "> 0.25%, not dead"
 }
