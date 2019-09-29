@@ -1,0 +1,33 @@
+{
+  "name": "wedding-ui",
+  "version": "1.0.0",
+  "description": "A beautiful information page about the wedding of Emrik and Sanna!",
+  "main": "wedding.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "html",
+    "css",
+    "vue",
+    "axios",
+    "wedding",
+    "image",
+    "gallery"
+  ],
+  "author": "Emrik Lundström",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/polyfill": "^7.6.0",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "swiper": "^5.0.3",
+    "vue": "^2.6.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.6.0",
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0"
+  }
+}
