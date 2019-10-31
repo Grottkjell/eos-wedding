@@ -7,69 +7,65 @@
 <link rel="stylesheet" href="w3-theme.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
 <link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="gallery/gallery.css">
 
 <body>
     <div id="app">
-        <!-- Header / Home-->
-        <div class="w3-display-container w3-wide bgimg" id="start">
-            <div class="w3-center top-center">
-                <h1 class="w3-jumbo">Emrik & Sanna</h1>
-                <p class="date">Har varit gifta sedan</p>
-                <p class="date"><b>2019-07-20</b></p>
-            </div>
-            <div class="w3-center" style="margin-top: 50px; margin-bottom: 25px;">
-                <span>{{days}}</span><span> dagar</span>
-                <span>{{hours}}</span><span> timmar</span>
-                <span>{{minutes}}</span><span> minuter och </span>
-                <span>{{seconds}}</span><span> sekunder</span>
-            </div>
-        </div>
-
         <!-- Navbar (sticky top) -->
         <div class="w3-top w3-hide-small" style="background-color: #fff;">
             <div class="w3-bar w3-white w3-center w3-opacity-min">
-                <a href="#start" style="width:14%" class="w3-bar-item w3-button">Start</a>
-                <a href="#images" style="width:14%" class="w3-bar-item w3-button">Se bilder från bröllopet</a>
-                <a href="#om" style="width:14%" class="w3-bar-item w3-button">Om oss</a>
-                <a href="#info" style="width:14%" class="w3-bar-item w3-button">Information</a>
-                <a href="#onskelista" style="width:14%" class="w3-bar-item w3-button">Önskelista</a>
-                <a href="#historia" style="width:14%" class="w3-bar-item w3-button">Historia</a>
-                <a href="#kontakt" style="width:14%" class="w3-bar-item w3-button">Kontakt</a>
+                <a href="#start" style="width:25%" class="w3-bar-item w3-button">Start</a>
+                <a href="#images" style="width:25%" class="w3-bar-item w3-button">Se bilder från bröllopet</a>
+                <!-- <a href="#om" style="width:14%" class="w3-bar-item w3-button">Om oss</a> -->
+                <!-- <a href="#info" style="width:14%" class="w3-bar-item w3-button">Information</a> -->
+                <!-- <a href="#onskelista" style="width:14%" class="w3-bar-item w3-button">Önskelista</a> -->
+                <a href="#historia" style="width:25%" class="w3-bar-item w3-button">Historia</a>
+                <a href="#kontakt" style="width:25%" class="w3-bar-item w3-button">Kontakt</a>
             </div>
         </div>
-
-
-        <!-- Image gallery -->
-        <div class="w3-container w3-padding-32 theme-color-white" id="images">
-            <div v-for="image in images">{{image}}</div>
-        </div>
-
+        
+        <!-- Header / Home-->
+        <div class="w3-display-container w3-wide bgimg" id="start">
+                <div class="w3-center top-center">
+                    <h1 class="w3-jumbo">Emrik & Sanna</h1>
+                    <p class="date">Har varit gifta sedan</p>
+                    <p class="date"><b>2019-07-20</b></p>
+                </div>
+                <div class="w3-center" style="margin-top: 50px; margin-bottom: 25px;">
+                    <span>{{days}}</span><span> dagar</span>
+                    <span>{{hours}}</span><span> timmar</span>
+                    <span>{{minutes}}</span><span> minuter och </span>
+                    <span>{{seconds}}</span><span> sekunder</span>
+                </div>
+            </div>
+    
+            <eos-gallery></eos-gallery>
 
         <!-- About -->
-        <div class="w3-container w3-padding-32 theme-color-white" id="om">
+        <!-- <div class="w3-container w3-padding-32 theme-color-white" id="om">
             <div class="w3-content">
                 <h1 class="w3-center"><b>Sanna & Emrik</b></h1>
-                <img class="w3-round center" alt="Bild på Sanna och Emrik" src="images/sanna_emrik_3.jpg">
+                <img class="w3-round center" alt="Bild på Sanna och Emrik" src="images/sanna_emrik_3.jpg"> 
                 <h2 class="w3-center">Hälsar er välkomna till vårt bröllop!</h2>
-                <!--<p class="center">
+                <p class="center">
                 Den 20 juli 2019 har vi varit tillsammans i 3379 dagar och förlovade i 2822.
-            </p>-->
-                <!--<p>
+            </p>
+                <p>
                 När vi träffades tog vi snabba beslut. Från det att vi såg varandra första gången tills vi klassade oss som ett par tog det mindre än en vecka. Från det att vi flyttade ihop till att vi förlovade oss och skaffade katt tog det 2 månader. Från det att vi flyttade till hus och att vi nu gifter oss tog det ca 2 år.
-            </p> -->
-                <!--<p></p>-->
+            </p> 
+                <p></p>
                 <br>
                 <p class="w3-center"><a href="#info" class="w3-button w3-black w3-round w3-padding-large w3-large">Detaljer
                         om bröllopsdagen</a></p>
             </div>
-        </div>
+        </div> -->
 
         <!-- Background photo -->
-        <div class="w3-display-container bgimg2">
-        </div>
+        <!-- <div class="w3-display-container bgimg2">
+        </div> -->
 
         <!-- Wedding information -->
-        <div class="w3-container w3-padding-32 theme-color-white w3-center" id="info">
+        <!-- <div class="w3-container w3-padding-32 theme-color-white w3-center" id="info">
             <div class="w3-content">
                 <h1><b>Information om bröllopsdagen</b></h1>
                 <div class="w3-row">
@@ -111,30 +107,30 @@
                     <p>Nybakat surdegsbröd och hoummus</p>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <!-- Background photo -->
-        <div class="w3-display-container bgimg3">
-        </div>
+        <!-- <div class="w3-display-container bgimg3">
+        </div> -->
 
 
 
 
         <!-- Wedding information -->
-        <div class="w3-container w3-padding-32 theme-color-white w3-center" id="onskelista">
+        <!--<div class="w3-container w3-padding-32 theme-color-white w3-center" id="onskelista">
             <div class="w3-content wishlist">
                 <h1><b>Önskelista</b></h1>
                 <h2>Den bästa presenten är ju förstås att ni kommer till vårt bröllop.</h2>
                 <div v-for="wish in wishlist">
                     <div class="w3-half">
                         <h3>
-                            <!--<button 
+                            <button 
                             v-if="wish.id !== 'bidrag'" type="button" class="btn btn-xs btn-default"
                             v-bind:class="{ 'btn-success': wish.selected, 'btn-info': !wish.selected }"
                             v-on:click="showDialog(wish.id)">
                             <span v-if="wish.selected">Tingad</span>
                             <span v-if="!wish.selected">Tinga</span>
-                        </button>-->
+                        </button>
                             <span>{{wish.title}}</span>
                         </h3>
                         <span v-html="wish.description"></span>
@@ -142,9 +138,19 @@
                 </div>
             </div>
         </div>
+    -->
 
         <!-- Background photo -->
-        <div class="w3-display-container bgimg4">
+        <!-- <div class="w3-display-container bgimg4">
+        </div> -->
+
+        <div class="w3-display-container w3-wide container-margin" id="gratitude">
+            <div class="w3-content">
+                <h1 class="w3-center"><b>Tack!</b></h1>
+                <p class="w3-center">
+                    Ni <b>alla</b> förgyllde vår dag och gjorde den precis perfekt.
+                </p>
+            </div>
         </div>
 
         <!-- About -->
@@ -260,10 +266,24 @@
                     </p>
                 </div>-->
                 </div>
-                <div class="w3-row">
-                    <h2 class="w3-center">20 Juli 2019</h2>
+                <!-- <div class="w3-row"> -->
+                    <!-- <h2 class="w3-center">20 Juli 2019</h2> -->
                     <!--<p></p>
                 <div class="w3-half">
+                    <p>
+                        <b>Sanna</b> : 
+                    </p>
+                </div>
+                <div class="w3-half">
+                    <p>
+                        <b>Emrik</b> :
+                    </p>
+                </div>-->
+                <!-- </div> -->
+                <div class="w3-row">
+                    <h2 class="w3-center">20 Juli 2019</h2>
+                    <p>ja, detta vet ni ju nu...</p>
+                    <!--<div class="w3-half">
                     <p>
                         <b>Sanna</b> : 
                     </p>
@@ -278,7 +298,7 @@
         </div>
 
         <!-- RSVP section -->
-        <div class="theme-color-light w3-container w3-padding-32 theme-color w3-center w3-wide" id="kontakt">
+        <!-- <div class="theme-color-light w3-container w3-padding-32 theme-color w3-center w3-wide" id="kontakt">
             <h1>Vi hoppas att ni kan komma!</h1>
             <p class="w3-large">Svara senast <b>20 maj</b> om ni kommer eller ej. För frågor kontaka Emrik eller Sanna</p>
             <p class="w3-small">Sanna: Tel. 076-8137144 alt. <a href="mailto:sannawidell@gmail.com">sannawidell@gmail.com</a></p>
@@ -286,7 +306,14 @@
             <br><br>
             <p class="w3-large">Vill ni hålla tal eller har andra funderingar kan ni kontakta vår toastmadame <b>Sofi
                     Widell:</b> 073-6556422</p>
+        </div> -->
+
+        <div class="theme-color-light w3-container w3-padding-32 theme-color w3-center w3-wide" id="kontakt">
+            <p class="w3-large">Hör av er om ni vill ta del av bilderna i sin fulla prakt och upplösning!</p>
+            <p class="w3-small">Sanna: Tel. 076-8137144 alt. <a href="mailto:sannawidell@gmail.com">sannawidell@gmail.com</a></p>
+            <p class="w3-small">Emrik: Tel. 076-8346776 alt. <a href="mailto:emrik.lundstrom@gmail.com">emrik.lundstrom@gmail.com</a></p>
         </div>
+    
     </div>
 </body>
 <script src="wedding.js"></script>

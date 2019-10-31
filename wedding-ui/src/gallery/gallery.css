@@ -1,0 +1,102 @@
+.w3-container {
+    height: auto;
+}
+
+.container-margin {
+    margin-bottom: 200px;
+}
+
+.gallery {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0;
+}
+
+.gallery {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 768px) {
+    .gallery {
+        width: 66%;
+    }
+}
+.image-container {
+    transition: 400ms width ease-in-out;
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    padding: 4px 4px 0 0;
+}
+.slide {
+    box-sizing: border-box;
+    opacity: 0.55;
+    width: 100%;
+}
+
+.slide.load-image-button {
+    display: inline-block;
+    width: calc(20% - 4px);
+    vertical-align: middle;
+    text-align: center;
+    opacity: 1;
+    box-shadow: 1px 1px 4px gray;
+    border-radius: 2px;
+    background-color: white;
+    border: none;
+    padding: 0;
+    margin-top: 4px;
+}
+
+@media screen and (max-width: 768px) {
+    .slide.load-image-button {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+.slide.load-image-button.break-row {
+    margin-top: 8px;
+}
+
+.active {
+    width: 100%;
+    opacity: 1;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.previous, .next {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 50%;
+}
+
+.previous {
+    left: 8px;
+}
+
+.next {
+    right: 8px;
+}
+
+.previous i,
+.next i {
+    border: solid white;
+    border-width: 0 6px 6px 0;
+    display: inline-block;
+    padding: 12px;
+    opacity: 0.75;
+}
+
+.previous i {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+}
+
+.next i {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}

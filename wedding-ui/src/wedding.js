@@ -1,7 +1,8 @@
 import Vue from "vue/dist/vue";
 import axios from "axios";
+import "./gallery/gallery";
 
-var app = new Vue({
+new Vue({
     el: '#app',
     data: {
         seconds: 0,
@@ -9,11 +10,6 @@ var app = new Vue({
         hours: 0,
         days: 0,
         wishlist: [],
-    },
-    computed: {
-        images() {
-            return axios.get("images");
-        }
     },
     created() {
         this.getWishlist();

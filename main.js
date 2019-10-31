@@ -16,30 +16,42 @@ const databasePath = path.join(__dirname, "database.json");
 let db = low(new FileSync(databasePath));
 db.defaults({ wishlist: [] }).write();
 
-router.get("/wishlist", function(req, res) {
+router.get("/wishlist", function (req, res) {
     res.send({
         wishlist: getWishlist(),
     });
 });
-router.put("/update/:id", function(req, res) {
+router.put("/update/:id", function (req, res) {
     selectWish(req.params.id)
     res.send(req.params);
 });
 app.use("/api", router);
 
-app.use("/images", function(req, res) {
-    const files = fs.readdirSync("static/images/from-the-wedding");
-    res.send(files);
+app.use("/images", function (req, res) {
+    const { currentPageNumber, imagesPerPage } = req.query;
+    const
+        begin = +currentPageNumber * +imagesPerPage,
+        end = (+currentPageNumber + 1) * +imagesPerPage,
+        images = fs.readdirSync("static/images/from-the-wedding")
+        ;
+    images.sort();
+    const selectedImages = begin < images.length ? images.slice(begin, end) : images;
+    const returnedImages = {
+        totalNrOfImages: images.length,
+        images: selectedImages
+    };
+    console.log(returnedImages);
+    res.send(returnedImages);
 });
 
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
     /**
      * TODO: Do some logging to file also.
      */
     res.status(500);
     res.send(err.toString());
 });
-app.listen(port, function() {
+app.listen(port, function () {
     console.log(`Starting application on port ${port}`);
 });
 
@@ -47,7 +59,7 @@ app.listen(port, function() {
 function selectWish(id) {
     db.get("wishlist")
       .find({ id: id })
-      .assign({selected: true})
+        .assign({ selected: true })
       .write();
 }
 
