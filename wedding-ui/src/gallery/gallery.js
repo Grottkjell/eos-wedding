@@ -1,7 +1,7 @@
 import Vue from "vue/dist/vue";
 import axios from "axios";
 
-const slidesPerView = 5, slidesPerColumn = 3;
+const slidesPerView = 5;
 
 const galleryComponent = {
     data: () => ({
