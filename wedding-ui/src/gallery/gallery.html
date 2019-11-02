@@ -1,15 +1,11 @@
-<div class="w3-container w3-padding-32 theme-color-white container-margin" id="images" v-if="images && images.length">
-    <div class="w3-center">
-        <h1><b>Bilder från vårt bröllop</b></h1>
-        <i>Klicka på knappen eller på den sista bilden för att ladda fler bilder.</i>
-    </div>
+<div id="gallery-root" class="w3-container w3-padding-32 theme-color-white container-margin" v-if="images && images.length">
     <div class="gallery">
         <div v-for="(image, index) in images" class="image-container" :class="{active: index === activeIndex}">
             <img
                 v-on:click="viewImage(index)"
                 class="slide"
-                :class="{active: index === activeIndex}"
-                :src="'images/from-the-wedding/' + image"
+                :class="{active: index === activeIndex, portrait: image.indexOf('portrait') !== -1}"
+                :src="'images/' + folder + '/' + image"
             >
             <button v-if="index === activeIndex" class="previous" v-on:click="viewPreviousImage()"><i class="arrow"></i></button>
             <button v-if="index === activeIndex" class="next" v-on:click="viewNextImage()"><i class="arrow"></i></button>
@@ -22,5 +18,17 @@
         >
         Se fler bilder
         </button>
+    </div>
+
+    <div class="image-modal-container" v-on:click="closeImageModal()">
+        <div class="image-modal">
+            <button v-on:click="closeImageModal()">
+                <span class="previous" ><i class="arrow"></i></span>
+                <span class="next"><i class="arrow"></i></span>
+            </button>
+
+            <!-- src is set by gallery script -->
+            <img>
+        </div>
     </div>
 </div>

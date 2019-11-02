@@ -3,6 +3,7 @@
 <title>Emrik & Sannas bröllop</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <link rel="stylesheet" href="w3-theme.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
@@ -12,7 +13,7 @@
 <body>
     <div id="app">
         <!-- Navbar (sticky top) -->
-        <div class="w3-top w3-hide-small" style="background-color: #fff;">
+        <div class="w3-top w3-hide-small" style="background-color: #fff;" id="navbar">
             <div class="w3-bar w3-white w3-center w3-opacity-min">
                 <a href="#start" style="width:25%" class="w3-bar-item w3-button">Start</a>
                 <a href="#images" style="width:25%" class="w3-bar-item w3-button">Se bilder från bröllopet</a>
@@ -26,20 +27,47 @@
         
         <!-- Header / Home-->
         <div class="w3-display-container w3-wide bgimg" id="start">
-                <div class="w3-center top-center">
-                    <h1 class="w3-jumbo">Emrik & Sanna</h1>
-                    <p class="date">Har varit gifta sedan</p>
-                    <p class="date"><b>2019-07-20</b></p>
-                </div>
-                <div class="w3-center" style="margin-top: 50px; margin-bottom: 25px;">
-                    <span>{{days}}</span><span> dagar</span>
-                    <span>{{hours}}</span><span> timmar</span>
-                    <span>{{minutes}}</span><span> minuter och </span>
-                    <span>{{seconds}}</span><span> sekunder</span>
+            <div class="w3-center top-center">
+                <h1 class="w3-jumbo">Emrik & Sanna</h1>
+                <p class="date">Har varit gifta sedan</p>
+                <p class="date"><b>2019-07-20</b></p>
+            </div>
+            <div class="w3-center" style="margin-top: 50px; margin-bottom: 25px;">
+                <span>{{days}}</span><span> dagar</span>
+                <span>{{hours}}</span><span> timmar</span>
+                <span>{{minutes}}</span><span> minuter och </span>
+                <span>{{seconds}}</span><span> sekunder</span>
+            </div>
+        </div>
+        
+        <div class="w3-display-container w3-wide container-margin" id="gratitude">
+                <div class="w3-content">
+                    <h1 class="w3-center"><b>Tack!</b></h1>
+                    <p class="w3-center">
+                        Ni <b>alla</b> förgyllde vår dag och gjorde den precis perfekt.
+                    </p>
                 </div>
             </div>
     
-            <eos-gallery></eos-gallery>
+        <div class="w3-center container-margin" id="images">
+            <h1><b>Bilder från vårt bröllop</b></h1>
+            <p>Klicka på pilarna eller bilderna för att titta på olika bilder i större format. För att se den fokuserade bilden i helskärmsläge, klicka en gång till.</p>
+            <p>Klicka på <i>Se fler bilder</i> eller på den sista bilden för att ladda fler bilder.</p>
+        </div>
+
+        <div class="w3-center container-margin">
+            <h2>Porträtt av Emrik Och Sanna</h2>
+            <eos-gallery folder="portratt-eos"></eos-gallery>
+
+            <h2>Vigsel</h2>
+            <eos-gallery folder="vigsel"></eos-gallery>
+            
+            <h2>Porträtt av alla</h2>
+            <eos-gallery folder="portratt"></eos-gallery>
+
+            <h2>Mingel och kalas</h2>
+            <eos-gallery folder="kalas"></eos-gallery>
+        </div>
 
         <!-- About -->
         <!-- <div class="w3-container w3-padding-32 theme-color-white" id="om">
@@ -143,15 +171,6 @@
         <!-- Background photo -->
         <!-- <div class="w3-display-container bgimg4">
         </div> -->
-
-        <div class="w3-display-container w3-wide container-margin" id="gratitude">
-            <div class="w3-content">
-                <h1 class="w3-center"><b>Tack!</b></h1>
-                <p class="w3-center">
-                    Ni <b>alla</b> förgyllde vår dag och gjorde den precis perfekt.
-                </p>
-            </div>
-        </div>
 
         <!-- About -->
         <div class="w3-container w3-padding-32 theme-color-white" id="historia">

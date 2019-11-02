@@ -27,14 +27,24 @@ router.put("/update/:id", function (req, res) {
 });
 app.use("/api", router);
 
-app.use("/images", function (req, res) {
+app.use("/images/:folder", function (req, res) {
     const { currentPageNumber, imagesPerPage } = req.query;
     const
         begin = +currentPageNumber * +imagesPerPage,
         end = (+currentPageNumber + 1) * +imagesPerPage,
-        images = fs.readdirSync("static/images/from-the-wedding")
+        images = fs.readdirSync(`static/images/${req.params.folder}`)
         ;
-    images.sort();
+
+    images.sort((a, b) => {
+        if (isPortrait(a) && !isPortrait(b)) {
+            return -1;
+        } else if (!isPortrait(a) && isPortrait(b)) {
+            return 1;
+        } else if(isPortrait(a) && isPortrait(b)) {
+            return 0;
+        }
+    });
+    
     const selectedImages = begin < images.length ? images.slice(begin, end) : images;
     const returnedImages = {
         totalNrOfImages: images.length,
@@ -42,6 +52,9 @@ app.use("/images", function (req, res) {
     };
     console.log(returnedImages);
     res.send(returnedImages);
+    function isPortrait(image) {
+        return image.indexOf('portrait') !== -1;
+    }
 });
 
 app.use(function (err, req, res, next) {

@@ -92,3 +92,7 @@ h2 {
 a {
   color: #0056b3;
 }
+
+#app {
+    position: relative;
+}

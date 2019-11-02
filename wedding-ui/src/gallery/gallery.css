@@ -10,9 +10,7 @@
     width: 100%;
     box-sizing: border-box;
     padding: 10px 0;
-}
-
-.gallery {
+    text-align: left;
     margin-left: auto;
     margin-right: auto;
 }
@@ -23,11 +21,13 @@
     }
 }
 .image-container {
-    transition: 400ms width ease-in-out;
+    cursor: pointer;
     position: relative;
     display: inline-block;
-    width: 20%;
-    padding: 4px 4px 0 0;
+    width: calc(20% - 4px);
+    box-shadow: 1px 1px 6px 1px rgb(167, 165, 165);
+    margin: 4px 4px 0 0;
+    text-align: center;
 }
 .slide {
     box-sizing: border-box;
@@ -67,6 +67,14 @@
     padding-right: 0;
 }
 
+img.portrait {
+    width: 40%;    
+}
+
+.active img.portrait {
+    width: 40%;
+}
+
 .previous, .next {
     background: none;
     border: none;
@@ -75,16 +83,16 @@
 }
 
 .previous {
-    left: 8px;
+    left: 9px;
 }
 
 .next {
-    right: 8px;
+    right: 9px;
 }
 
 .previous i,
 .next i {
-    border: solid white;
+    border: solid black;
     border-width: 0 6px 6px 0;
     display: inline-block;
     padding: 12px;
@@ -99,4 +107,38 @@
 .next i {
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+}
+
+.image-modal-container {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none;
+    position: fixed;
+    text-align: center;   
+    height: 100%;
+    top: 0;
+    width: 100%;
+    /* z-index is greater than that of the navbar (which is 1) */
+    z-index: 2;
+}
+
+.image-modal {
+    position: relative;
+    height: calc(100% - 10px - 10px);
+    margin: 10px;
+}
+
+.image-modal img {
+    height: auto;
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.image-modal button {
+    box-sizing: border-box;
+    background: none;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 22px;
 }
