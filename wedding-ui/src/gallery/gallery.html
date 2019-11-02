@@ -1,6 +1,10 @@
 <div id="gallery-root" class="w3-container w3-padding-32 theme-color-white container-margin" v-if="images && images.length">
     <div class="gallery">
-        <div v-for="(image, index) in images" class="image-container" :class="{active: index === activeIndex}">
+        <div
+            v-for="(image, index) in images"
+            class="image-container"
+            :class="{active: index === activeIndex}"
+            >
             <img
                 v-on:click="viewImage(index)"
                 class="slide"

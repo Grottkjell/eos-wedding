@@ -21,7 +21,6 @@
     }
 }
 .image-container {
-    cursor: pointer;
     position: relative;
     display: inline-block;
     width: calc(20% - 4px);
@@ -30,6 +29,7 @@
     text-align: center;
 }
 .slide {
+    cursor: pointer;
     box-sizing: border-box;
     opacity: 0.55;
     width: 100%;
