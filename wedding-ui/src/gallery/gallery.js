@@ -14,7 +14,6 @@ const galleryComponent = {
         currentPageNumber: 0,
         totalNrOfImages: 0,
         activeIndex: 0,
-        maximizedImage: ''
     }),
     created() {
         this.getImages();
@@ -66,9 +65,9 @@ const galleryComponent = {
         openImageModal(indexOfImageToView) {
             let modal;
             if (!modalInitialized) {
-                const e = document.querySelector('#app');
+                const appRoot = document.querySelector('#app');
                 modal = document.querySelector('#gallery-root>.image-modal-container')
-                e.appendChild(modal);
+                appRoot.appendChild(modal);
                 modalInitialized = true;
             } else {
                 modal = document.querySelector('#app>.image-modal-container');
@@ -77,13 +76,8 @@ const galleryComponent = {
             modal.style.display = 'block';
         },
         closeImageModal() {
-            console.log('i am probably not here');
-            setTimeout(() => {
-                const modal = document.querySelector('#app>.image-modal-container');
-                modal.style.display = 'none';
-            });
-            
-            this.maximizedImage = '';
+            const modal = document.querySelector('#app>.image-modal-container');
+            modal.style.display = 'none';
         }
     }
 }
